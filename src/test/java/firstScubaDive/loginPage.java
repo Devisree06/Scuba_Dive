@@ -16,7 +16,7 @@ public class loginPage {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("disable-notification");
 		WebElement searchButton=driver.findElement(By.xpath("//input[@placeholder='Search AJIO']"));
-		searchButton.sendKeys("Kids dress",Keys.ENTER);
+		searchButton.sendKeys("Women dress",Keys.ENTER);
 		//WebElement a=driver.findElement(By.xpath("//a[text()='WOMEN']"));
 		//a.click();
 		//Actions action=new Actions(driver);
