@@ -1,5 +1,7 @@
 package firstScubaDive;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -17,6 +19,11 @@ public class loginPage {
 		options.addArguments("disable-notification");
 		WebElement searchButton=driver.findElement(By.xpath("//input[@placeholder='Search AJIO']"));
 		searchButton.sendKeys("Women dress",Keys.ENTER);
+		List<WebElement> findElements = driver.findElements(By.xpath("//div[@class='nameCls']"));
+		for(WebElement e:findElements)
+		{
+			System.out.println("List of dress :" + e.getText());
+		}
 		//WebElement a=driver.findElement(By.xpath("//a[text()='WOMEN']"));
 		//a.click();
 		//Actions action=new Actions(driver);
